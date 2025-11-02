@@ -1,9 +1,14 @@
 import discord
 from discord.ext import commands
 import asyncio
+from dotenv import load_dotenv
+import os
 
-# Token do bot
-TOKEN_DO_BOT = 'MTQxODI4NjQ2NzIyMTk0NjU1MQ.GJMv3Q.NOSVcczTk2quF6vNrZIMRQL7z8z_KSf9BShHtg'
+# Carregar variáveis de ambiente do arquivo .env
+load_dotenv()
+
+# Obter o token do ambiente
+TOKEN_DO_BOT = os.getenv('DISCORD_TOKEN')
 
 # Intents necessárias
 intents = discord.Intents.all()
